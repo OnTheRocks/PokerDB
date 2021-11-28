@@ -51,7 +51,7 @@ run()
     try {
       const tournament = await Tournaments.where("buyIn")
         .gt(10)
-        .populate({ path: "players", model: "Player"})
+        .populate('players')
       console.log(tournament)
     } catch (e) {
       console.log(e.message)
