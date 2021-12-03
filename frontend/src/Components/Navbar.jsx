@@ -12,19 +12,17 @@ export default function Navbar() {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a><Link to="/" class="nav-link active" aria-current="page">Home</Link></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/players">Players</a>
+              <a><Link to="/players" class="nav-link" href="/players">Players</Link></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/Create">Create New Player</a>
+              <a><Link to="/create" class="nav-link" href="/Create">Create New Player</Link></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-
   )
 }
