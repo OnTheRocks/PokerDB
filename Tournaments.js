@@ -5,6 +5,7 @@ const tournamentsSchema = new mongoose.Schema({
   pokerGame: String,
   blinds: String,
   buyIn: Number,
+  rebuys: Boolean,
   numberOfPlayers: Number,
   players: [{ 
     type: mongoose.SchemaTypes.ObjectId, 
