@@ -1,7 +1,7 @@
 const mongoose = require('mongoose') 
-const { populate } = require('./Player')
-const Player = require("./Player") 
-const Tournaments = require('./Tournaments')
+const { populate } = require('./Models/Player')
+const Player = require("./Models/Player") 
+const Tournaments = require('./Models/Tournaments')
 
 mongoose.connect("mongodb://localhost/PokerDB", () => { console.log("Connected to PokerDB") }, e => console.error(e))
 

@@ -22,7 +22,11 @@ router.route("/create").post((req, res) => {
   });
 
   newPlayer.save();
-
 })
 
-models.exports = router;
+router.route("/players").get((req, res) => {
+  Player.find()
+    .then(foundPlayers => res.json(foundPlayers))
+})
+
+module.exports = router;
