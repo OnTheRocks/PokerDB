@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from "axios";
+
 
 function CreatePlayer() {
   const [input, setInput] = useState({
@@ -23,8 +25,18 @@ function CreatePlayer() {
   }
 
   function handleClick(event) {
-    event.preventDefault();    
+    event.preventDefault(); 
+    const newPlayer = {
+      firstName: input.firstName,
+      lastName: input.lastName,
+      nickName: input.nickName,
+      phone: input.phone,
+      email: input.email,
+      location: input.location,
+      notes: input.notes,
+    }   
     console.log(input)
+    axios.post('http://localhost:3500/create', newPlayer)
   }
 
   return (
