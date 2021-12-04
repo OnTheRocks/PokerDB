@@ -3,22 +3,22 @@ import {Link} from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">PokerDB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">PokerDB</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a><Link to="/" class="nav-link active" aria-current="page">Home</Link></a>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/" className="nav-link active" aria-current="page">Home</Link>
             </li>
-            <li class="nav-item">
-              <a><Link to="/players" class="nav-link" href="/players">Players</Link></a>
+            <li className="nav-item">
+              <Link to="/players" className="nav-link" href="/players">Players</Link>
             </li>
-            <li class="nav-item">
-              <a><Link to="/create" class="nav-link" href="/Create">Create New Player</Link></a>
+            <li className="nav-item">
+              <Link to="/create" className="nav-link" href="/Create">Create New Player</Link>
             </li>
           </ul>
         </div>

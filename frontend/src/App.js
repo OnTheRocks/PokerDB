@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Routes, Route} from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import CreatePlayer from './Components/CreatePlayer';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
