@@ -21,10 +21,10 @@ function Players() {
 
   return (
     <div className="container">
-      <h1>Players</h1>
+      <h1>Hello</h1>
       {players.map(player =>
       <div>
-        <h1>{player.firstName}</h1>
+        <h1>Hello again!</h1>
       </div>
       )}
     </div>
