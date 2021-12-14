@@ -8,7 +8,7 @@ function Players() {
     phone: '',
     email: '',
     location: '',
-    notes: '',
+    notes: ''
   }])
 
   useEffect(() => {
@@ -19,16 +19,16 @@ function Players() {
     }).then(jsonRes => setPlayers(jsonRes));
   })
 
-  return (
+  return  (  
     <div className="container">
-      <h1>Hello</h1>
+      <h1>Heello</h1>
       {players.map(player =>
       <div>
-        <h1>Hello again!</h1>
+        <h1>{player.nickName}</h1>
       </div>
       )}
     </div>
-  )
-}
+
+  )}
 
 export default Players
