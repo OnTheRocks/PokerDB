@@ -15,23 +15,27 @@ function Players() {
 
   useEffect(() => {
     fetch("/players").then(res => {
+      
       if(res.ok) {
         return res.json()
       }
+      
     }).then(jsonRes => setPlayers(jsonRes));
   })
 
-  console.log({player})
 
   return  (  
     <div className="container">
-      <h1>Hello</h1>
-      {players.map(player =>
+      <h1>Player List</h1>
+      {players.map(player =>    
       <div>
-        <h1>{player.nickName}</h1>
+        <h1>1{player.nickName}</h1>
+        
       </div>
-      )}
+  )}
+      
     </div>
+    
 
   )}
 
