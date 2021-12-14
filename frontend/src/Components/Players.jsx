@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Players() {
   const [players, setPlayers] = useState([{
@@ -11,6 +11,8 @@ function Players() {
     notes: ''
   }])
 
+
+
   useEffect(() => {
     fetch("/players").then(res => {
       if(res.ok) {
@@ -19,9 +21,11 @@ function Players() {
     }).then(jsonRes => setPlayers(jsonRes));
   })
 
+  console.log({player})
+
   return  (  
     <div className="container">
-      <h1>Heello</h1>
+      <h1>Hello</h1>
       {players.map(player =>
       <div>
         <h1>{player.nickName}</h1>
