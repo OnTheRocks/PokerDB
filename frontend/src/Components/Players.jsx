@@ -18,7 +18,7 @@ function Players() {
       if(res.ok) {
         return res.json()
       }      
-    }).then(jsonRes => setPlayers(jsonRes));    
+    }).then(jsonRes => setPlayers(jsonRes));   
   })
 
   return (
@@ -26,7 +26,7 @@ function Players() {
       <h1>Players Page</h1>
       {players.map(player =>
         <div>
-          <h2>{player.firstName}</h2>
+          <h3>{player.firstName} {player.lastName}</h3>
           <p>{player.nickName}</p>         
         </div>
       )}
