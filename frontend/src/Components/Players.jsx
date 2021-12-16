@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Players() {
   const [players, setPlayers] = useState([{
@@ -14,29 +14,24 @@ function Players() {
 
 
   useEffect(() => {
-    fetch("/players").then(res => {
-      
+    fetch("/players").then(res => {      
       if(res.ok) {
         return res.json()
-      }
-      
-    }).then(jsonRes => setPlayers(jsonRes));
+      }      
+    }).then(jsonRes => setPlayers(jsonRes));    
   })
 
-
-  return  (  
-    <div className="container">
-      <h1>Player List</h1>
-      {players.map(player =>    
-      <div>
-        <h1>1{player.nickName}</h1>
-        
-      </div>
-  )}
-      
+  return (
+    <div className='container'>
+      <h1>Players Page</h1>
+      {players.map(player =>
+        <div>
+          <h2>{player.firstName}</h2>
+          <p>{player.nickName}</p>         
+        </div>
+      )}
     </div>
-    
-
-  )}
+  )
+}
 
 export default Players
