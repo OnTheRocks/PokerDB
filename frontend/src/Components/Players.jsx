@@ -27,7 +27,13 @@ function Players() {
       {players.map(player =>
         <div>
           <h3>{player.firstName} {player.lastName}</h3>
-          <p>{player.nickName}</p>         
+          <p>{player._id}</p>
+          {/* <p>
+            {player.nickName}<br></br>
+            {player.email}<br></br>
+            {player.phone}<br></br>
+            {player.location}<br></br>
+            {player.notes}</p>          */}
         </div>
       )}
     </div>
