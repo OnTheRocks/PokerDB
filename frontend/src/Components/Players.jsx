@@ -23,7 +23,7 @@ function Players() {
 
   return (
     <div className='container'>
-      <h1>Players Page</h1>
+      <h1><u>Players</u></h1>
       {players.map(player =>
         <div>
           <h3>{player.firstName} {player.lastName}</h3>
